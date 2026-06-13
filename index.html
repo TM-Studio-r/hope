@@ -493,7 +493,7 @@
                 }
 
                 await appendMessageUI('bot', botResponse, true);
-                saveState();
+                
 
             } catch (error) {
                 console.error(error);
@@ -504,12 +504,6 @@
             }
         };
 
-        function saveState() {
-            localStorage.setItem("bot_history", JSON.stringify(historyLogic));
-            localStorage.setItem("bot_summer", summer);
-            localStorage.setItem("bot_chats", chats.toString());
-            localStorage.setItem("bot_ui", JSON.stringify(uiMessages));
-        }
 
         window.newChat = function() {
             localStorage.clear();
